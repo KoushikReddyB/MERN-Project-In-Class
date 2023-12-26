@@ -6,11 +6,14 @@ const app=new express()
 app.use(express.json())
 app.use(cors())
 
-const client = new MongoClient()
+const client = new MongoClient('mongodb+srv://admin:zap@cluster0.ukbopgn.mongodb.net/?retryWrites=true&w=majority')
 client.connect()
+const db = client.db('Cluster 0: MERN PROJECT')
+const col = db.collection('Register')
 
 app.post('/insert',(req,res)=>{
     console.log(req.body)
+    col.insertOne(req.body)
     res.send("Data Recieved")
 })
 
