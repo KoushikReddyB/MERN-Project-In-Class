@@ -1,16 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import Reg from './components/Register'
+import Registration from './components/Signup'
 
 function App() {
+ 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Counselor and Visitor Management System</p>
+        <p>counselor & visiter management system</p>
       </header>
       <div className="App-body">
-        <Reg />
+       <Registration />
       </div>
     </div>
   );
