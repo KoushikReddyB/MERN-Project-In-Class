@@ -14,12 +14,12 @@ const col=db.collection('Register')
 app.post('/insert',(req,res)=>{
     console.log(req.body)
     col.insertOne(req.body)
-    res.send("recieved data")
+    res.send("Data Recieved")
 })
 
 app.get('/home',(req,res)=>{
-    res.send("home page")
+    res.send("HomePage")
 })
 
 app.listen(8081)
-console.log('server running')
+console.log('Server is Running in Port: 8081')
